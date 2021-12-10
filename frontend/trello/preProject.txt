@@ -1,0 +1,20 @@
+Buenas Tardes!
+La idea es la siguiente... Tengo una empresa para el cuidado de mascotas, vale? el nombre de mi empresa es AngularPets. 
+Tengo un personal compuesto por unas 10 personas y a lo largo del día ellos deben revisar una planilla que tengo en excel donde le pongo las actividades
+a realizar (ejemplo: Bañar a los perros, darles de comer, realizar limpieza de nuestro lugar de trabajo, entre otras actividades)...
+las actividades que les pongo en excel constan de unas columnas sencillas donde les pongo el nombre de quien las va a realizar, la fecha en que creo esa fila en excel,
+y unos campos para que ellos puedan reportar cuando empiecen a realizar la actividad con su respectiva fecha y al igual cuando la finalicen 
+con su respectiva fecha de finalización, también hay un campo de comentarios por si ellos quisieran agregar algún comentario al finalizar la tarea. 
+Los registros deben seguir un orden, cuando el empleado cambia el estado a "en progreso", automáticamente aparece la fecha en que inicia ese estado,
+ luego de que esté en progreso, la tarea se puede finalizar y al finalizarla la fecha de "finalizado" también se actualiza de forma automática.
+
+Como mi empresa empieza a crecer, AngularPets podría  contratar unos empleados más antes de finalizar el año... 
+Así que quiero que ustedes que conocen del tema hablen con su equipo de desarrolladores y me coticen un sistema web para que todo el equipo de empleados 
+pueda ver esas tareas desde sus propios dispositivos con solo acceder a la página. Quiero que solo ellos puedan acceder, 
+por lo tanto debe haber alguna sección en la página que les permita registrarse para que tengan su propia cuenta. Adicional a eso, 
+quiero que solo puedan ver las tareas que ellos mismos se asignen, que no puedan ver la de los otros (como conservando la privacidad de sus actividades), 
+por mi parte, quiero una cuenta que me permita ver a mi como administrador del negocio Todas las tareas que ellos tienen, y quiero realizar unas pequeñas consultas:
+-cuantas tareas tiene cada persona.
+-cual es la tarea que más tiempo le tomó hacer
+- un promedio del tiempo que tarda en finalizar las tareas del día que yo seleccione.
+Eso con el fin de yo tomar ciertas decisiones. 
