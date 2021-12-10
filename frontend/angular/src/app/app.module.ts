@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { VoidComponent } from './components/void/void.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { SingUpComponent } from './components/sing-up/sing-up.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     HomeComponent,
     DashboardComponent,
     VoidComponent,
-    NavbarComponent
+    NavbarComponent,
+    SingUpComponent
   ],
   imports: [
     BrowserModule,
