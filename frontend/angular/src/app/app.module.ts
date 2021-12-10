@@ -8,6 +8,13 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { VoidComponent } from './components/void/void.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
+import { ToastrModule } from 'ngx-toastr';
+import { AuthGuard } from './guard/auth.guard';
+import { InterceptorService } from './services/interceptor.service';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
+
 
 @NgModule({
   declarations: [
@@ -21,9 +28,18 @@ import { SingUpComponent } from './components/sing-up/sing-up.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [AuthGuard,
+  {
+    provide:HTTP_INTERCEPTORS,
+    useClass: InterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
