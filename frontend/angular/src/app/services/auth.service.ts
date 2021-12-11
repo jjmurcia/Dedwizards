@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private httpClient: HttpClient, private routerService: Router) { }
 
   loginUser(user: any){
-    return this.httpClient.post("http://localhost:3000/usuarios/",user,{headers: {"Content-Type": "application/json"} })
+    return this.httpClient.post("http://localhost:8080/usuarios/",user,{headers: {"Content-Type": "application/json"} })
   }
 
   estoyLogged(){
