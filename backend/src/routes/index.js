@@ -54,7 +54,7 @@ router.get("/tasks", (req, res) => {
   ]);
 });
 
-router.get("/tasks-private", (req, res) => {
+router.get("/tasks-private", verifyToken, (req, res) => {
   res.json([
     {
       _id: 1,
@@ -77,4 +77,26 @@ router.get("/tasks-private", (req, res) => {
   ]);
 });
 
+router.get("/profile", verifyToken, (req, res)=> {
+  res.send(req.userId);
+})
+
 module.exports = router;
+
+function verifyToken(req, res, next) {
+  if (!req.headers.autorization) {
+    // si no existe datos de autorizacion
+    return res.status(401).send("respuesta no autorizada");
+  }
+  //console.log(req.headers.autorization);
+
+  const token = req.headers.autorization.split(" ")[1];
+  if(token === "null"){
+    return res.status(401).send("respuesta no autorizada");
+  }
+
+  const payload = jwt.verify(token, "confidencial");
+  req.userId = payload._id;  // id del usuario
+
+  next();
+}
