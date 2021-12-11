@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { VoidComponent } from './components/void/void.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PendingTasksComponent } from './components/pending-tasks/pending-tasks.component';
 import { SingUpComponent } from './components/sing-up/sing-up.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AuthGuard } from './guard/auth.guard';
@@ -14,7 +15,6 @@ import { InterceptorService } from './services/interceptor.service';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
-
 
 @NgModule({
   declarations: [
@@ -24,7 +24,9 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
     DashboardComponent,
     VoidComponent,
     NavbarComponent,
+    PendingTasksComponent
     SingUpComponent
+
   ],
   imports: [
     BrowserModule,
