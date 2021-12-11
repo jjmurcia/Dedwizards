@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 
 
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -24,6 +23,7 @@ export class LoginComponent implements OnInit {
   login() {
     console.log(this.datosLogin)
     this.authService.loginUser(this.datosLogin).subscribe((res) => {
+      console.log(res)
       if ((res as any).token) {
         localStorage.setItem('token', (res as any).token)
         this.routerService.navigate(['/home'])

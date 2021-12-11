@@ -14,19 +14,19 @@ export class TasksService {
   }
 
   constructor(private httpClient: HttpClient) { }
-  getAllGuitars() {
-    return this.httpClient.get("http://localhost:3000/guitarras/")
+  getAllUsername() {
+    return this.httpClient.get("http://localhost:8080/Username/")
   }
 
-  postCreateGuitar(guitar: any) {
-    return this.httpClient.post("http://localhost:3000/guitarras/", guitar, { headers: { "Content-Type": "application/json" } })
+  postCreateUsername(Username: any) {
+    return this.httpClient.post("http://localhost:8080/Username/", Username, { headers: { "Content-Type": "application/json" } })
   }
 
-  getGuitarsByBranch(branch: string) {
+  getUsernameByBranch(branch: string) {
 
   }
 
-  deleteGuitar(branch: string, model: string) {
+  deleteUsername(branch: string, model: string) {
 
   }
 

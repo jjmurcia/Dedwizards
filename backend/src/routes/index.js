@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const router = Router();
 
-const User = require("../models/user");
+const User = require("../models/Usuario");
 const jwt = require("jsonwebtoken");
 
 router.get("/api", (req, res) => res.send("hola mundo"));
